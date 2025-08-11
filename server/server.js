@@ -18,13 +18,10 @@ const discography = [
   {
     title: "Going Solo: 20th Century Virtuosities for Solo Flute",
     releaseDate: "Available on All Platforms October 14, 2024",
-    cover: "/assets/album-going-solo.jpg",
+    cover: "/Going_Solo_Album_Cover.PNG",
     links: {
-      spotify: "https://open.spotify.com/artist/37tG8lF6Kh3cpf6tfvEHsA",
-      apple: "https://music.apple.com/us/artist/eugene-lee/1773815454",
-      ytmusic: "https://www.youtube.com/playlist?list=OLAK5uy_lUG6lmj8KOKkDQjsvs8VwLl8vBetI8rT0",
-      instagram: "https://instagram.com/eugene.lee.flute",
-      youtube: "https://www.youtube.com/@eugene.lee.flute"
+      spotify: "https://open.spotify.com/album/6RwizD13N0X1XNJVCyE791",
+      amazon: "https://www.amazon.com/Arthur-Honegger-Danse-Ch%C3%A8vre-H-39/dp/B0DK2H6J4X"
     }
   }
 ];
@@ -79,11 +76,18 @@ const resume = {
 app.get("/api/health", (req, res) => res.json({ ok: true }));
 app.get("/api/discography", (req, res) => res.json({ albums: discography }));
 app.get("/api/performances", (req, res) => res.json({ performances }));
-app.get("/api/resume", (req, res) => res.json(resume));
+app.get("/api/resume", (req, res) => {
+  try {
+    res.json(resume);
+  } catch (err) {
+    console.error("Error sending resume:", err);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
 
 // -------- Serve production client build if present --------
 const clientDist = path.join(__dirname, "../client/dist");
 app.use(sirv(clientDist, { single: true, dev: false }));
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 5173;
 app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
