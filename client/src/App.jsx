@@ -54,11 +54,11 @@ function Carousel({ images, interval = 15000 }) {
   )
 }
 
-function Section({ id, title, children }) {
+function Section({ id, title, className = '', children }) {
   return (
-    <section id={id} className="scroll-mt-24 bg-bone">
+    <section id={id} className={`scroll-mt-24 bg-bone ${className}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        {title && <h2 className="text-xl sm:text-2xl font-semibold mb-6 text-center">{title}</h2>}
+        {title && <h2 className="text-2xl font-semibold mb-6 text-center">{title}</h2>}
         {children}
       </div>
     </section>
@@ -342,60 +342,77 @@ export default function App() {
   return (
     <div className="font-sans">
       <Navbar />
-
-    {/* HOME / HERO with rotating images */}
-      <Section id="home" className="scroll-mt-24 bg-bone pt-24 md:pt-0">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-10 items-center">
+      
+      {/* HOME / HERO with rotating images */}
+      <Section
+        id="home"
+        /* Mobile: fill viewport minus 4rem navbar, center vertically.
+          Desktop: remove the min-height + flex so layout stays exactly as before. */
+        className="pt-20 md:pt-0 min-h-[calc(100svh-4rem)] md:min-h-0 flex items-center md:block"
+      >
+        <div
+          className={
+            /* Optional: simulate ~90% zoom on desktop without affecting mobile.
+              Remove `md:scale-[0.9] lg:scale-100` if you want 100% everywhere. */
+            "grid md:grid-cols-2 gap-8 lg:gap-10 items-center w-full transform md:scale-[0.9] lg:scale-100 md:origin-top"
+          }
+        >
+          {/* Left side: text (always visible) */}
           <div className="text-center md:text-left">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight">Eugene Lee</h1>
-        <p className="mt-4 text-base md:text-lg text-neutral-700 leading-relaxed">
-          Music isn’t a hobby.<br />
-          Collecting coins is a hobby.<br />
-          Being a musician is a way of life.<br />
-          It’s who you are, not merely<br />
-          something you do.
-        </p>
-        <div className="mt-6 flex justify-center md:justify-start items-center gap-4">
-          <a
-            href="https://instagram.com/eugene.__lee"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram: @eugene.__lee"
-            className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
-          >
-            <FaInstagram className="w-7 h-7 text-pink-500" />
-          </a>
-          <a
-            href="https://www.youtube.com/@CubingFlutist"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube: @CubingFlutist"
-            className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
-          >
-            <FaYoutube className="w-7 h-7 text-red-500" />
-          </a>
-          <a
-            href="https://open.spotify.com/artist/37tG8lF6Kh3cpf6tfvEHsA"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Spotify artist page"
-            className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
-          >
-            <FaSpotify className="w-7 h-7 text-green-500" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/eugene-lee-0965952b5/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn profile"
-            className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
-          >
-            <FaLinkedin className="w-7 h-7 text-blue-500" />
-          </a>
-        </div>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight">Eugene Lee</h1>
+            <p className="mt-4 text-base md:text-lg text-neutral-700 leading-relaxed">
+              Music isn’t a hobby.<br />
+              Collecting coins is a hobby.<br />
+              Being a musician is a way of life.<br />
+              It’s who you are, not merely<br />
+              something you do.
+            </p>
+            <div className="mt-6 flex justify-center md:justify-start items-center gap-4">
+              <a
+                href="https://instagram.com/eugene.__lee"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram: @eugene.__lee"
+                className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
+              >
+                <FaInstagram className="w-7 h-7 text-pink-500" />
+              </a>
+              <a
+                href="https://www.youtube.com/@CubingFlutist"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube: @CubingFlutist"
+                className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
+              >
+                <FaYoutube className="w-7 h-7 text-red-500" />
+              </a>
+              <a
+                href="https://open.spotify.com/artist/37tG8lF6Kh3cpf6tfvEHsA"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Spotify artist page"
+                className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
+              >
+                <FaSpotify className="w-7 h-7 text-green-500" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/eugene-lee-0965952b5/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
+                className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
+              >
+                <FaLinkedin className="w-7 h-7 text-blue-500" />
+              </a>
+            </div>
           </div>
-          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
-        <Carousel images={['/eugenelee1.JPG', '/eugenelee2.JPG', '/eugenelee3.JPG']} interval={3000} />
+
+          {/* Right side: carousel — hidden on mobile, unchanged on desktop */}
+          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden hidden md:block">
+            <Carousel
+              images={['/eugenelee1.JPG', '/eugenelee2.JPG', '/eugenelee3.JPG']}
+              interval={3000}
+            />
           </div>
         </div>
       </Section>
