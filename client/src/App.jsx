@@ -348,7 +348,7 @@ export default function App() {
         id="home"
         /* Mobile: fill viewport minus 4rem navbar, center vertically.
           Desktop: remove the min-height + flex so layout stays exactly as before. */
-        className="pt-20 md:pt-0 min-h-[calc(100svh-4rem)] md:min-h-0 flex items-center md:block"
+        className="pt-20 md:pt-0 min-h-[calc(100svh-3rem)] md:min-h-0 flex items-center md:block"
       >
         <div
           className={
@@ -417,6 +417,18 @@ export default function App() {
         </div>
       </Section>
 
+      {/* Mobile-only rotating photo below the hero */}
+      <Section id="gallery"> 
+        <div className="mt-10 md:hidden w-full">
+          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
+            <Carousel
+              images={['/eugenelee1.JPG', '/eugenelee2.JPG', '/eugenelee3.JPG']}
+              interval={3000}
+            />
+          </div>
+        </div>
+      </Section>
+      
       {/* BIO */}
       <Section id="bio" title="Bio">
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
