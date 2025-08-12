@@ -344,7 +344,7 @@ export default function App() {
       <Navbar />
 
      {/* HOME / HERO with rotating images */}
-      <Section id="home">
+      <Section id="home" className="pt-24 md:pt-0">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10 items-center">
           <div className="text-center md:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight">Eugene Lee</h1>
