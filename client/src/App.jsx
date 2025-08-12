@@ -343,7 +343,7 @@ export default function App() {
     <div className="font-sans">
       <Navbar />
 
-    /* HOME / HERO with rotating images */
+    {/* HOME / HERO with rotating images */}
       <Section id="home" className="scroll-mt-24 bg-bone pt-24 md:pt-0">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10 items-center">
           <div className="text-center md:text-left">
