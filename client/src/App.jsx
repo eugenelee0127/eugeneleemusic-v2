@@ -343,64 +343,64 @@ export default function App() {
     <div className="font-sans">
       <Navbar />
 
-     {/* HOME / HERO with rotating images */}
-      <Section id="home" className="pt-24 md:pt-0">
+    /* HOME / HERO with rotating images */
+      <Section id="home" className="scroll-mt-24 bg-bone pt-24 md:pt-0">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-10 items-center">
           <div className="text-center md:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight">Eugene Lee</h1>
-            <p className="mt-4 text-base md:text-lg text-neutral-700 leading-relaxed">
-              Music isn’t a hobby.<br />
-              Collecting coins is a hobby.<br />
-              Being a musician is a way of life.<br />
-              It’s who you are, not merely<br />
-              something you do.
-            </p>
-            <div className="mt-6 flex justify-center md:justify-start items-center gap-4">
-              <a
-                href="https://instagram.com/eugene.__lee"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram: @eugene.__lee"
-                className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
-              >
-                <FaInstagram className="w-7 h-7 text-pink-500" />
-              </a>
-              <a
-                href="https://www.youtube.com/@CubingFlutist"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube: @CubingFlutist"
-                className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
-              >
-                <FaYoutube className="w-7 h-7 text-red-500" />
-              </a>
-              <a
-                href="https://open.spotify.com/artist/37tG8lF6Kh3cpf6tfvEHsA"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Spotify artist page"
-                className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
-              >
-                <FaSpotify className="w-7 h-7 text-green-500" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/eugene-lee-0965952b5/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn profile"
-                className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
-              >
-                <FaLinkedin className="w-7 h-7 text-blue-500" />
-              </a>
-            </div>
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight">Eugene Lee</h1>
+        <p className="mt-4 text-base md:text-lg text-neutral-700 leading-relaxed">
+          Music isn’t a hobby.<br />
+          Collecting coins is a hobby.<br />
+          Being a musician is a way of life.<br />
+          It’s who you are, not merely<br />
+          something you do.
+        </p>
+        <div className="mt-6 flex justify-center md:justify-start items-center gap-4">
+          <a
+            href="https://instagram.com/eugene.__lee"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram: @eugene.__lee"
+            className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
+          >
+            <FaInstagram className="w-7 h-7 text-pink-500" />
+          </a>
+          <a
+            href="https://www.youtube.com/@CubingFlutist"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube: @CubingFlutist"
+            className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
+          >
+            <FaYoutube className="w-7 h-7 text-red-500" />
+          </a>
+          <a
+            href="https://open.spotify.com/artist/37tG8lF6Kh3cpf6tfvEHsA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Spotify artist page"
+            className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
+          >
+            <FaSpotify className="w-7 h-7 text-green-500" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/eugene-lee-0965952b5/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+            className="text-neutral-700 hover:text-neutral-900 touch-manipulation"
+          >
+            <FaLinkedin className="w-7 h-7 text-blue-500" />
+          </a>
+        </div>
           </div>
           <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
-            <Carousel images={["/eugenelee1.JPG", "/eugenelee2.JPG", "/eugenelee3.JPG"]} interval={3000} />
+        <Carousel images={['/eugenelee1.JPG', '/eugenelee2.JPG', '/eugenelee3.JPG']} interval={3000} />
           </div>
         </div>
       </Section>
 
-      {/* BIO */}
+      {/* BIO */}}
       <Section id="bio" title="Bio">
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           <div className="md:col-span-2 space-y-4">
