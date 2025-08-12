@@ -400,7 +400,7 @@ export default function App() {
         </div>
       </Section>
 
-      {/* BIO */}}
+      {/* BIO */}
       <Section id="bio" title="Bio">
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           <div className="md:col-span-2 space-y-4">
