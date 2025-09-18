@@ -434,7 +434,7 @@ export default function App() {
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           <div className="md:col-span-2 space-y-4">
             <p className="leading-7 text-neutral-800 text-justify text-sm sm:text-base">
-              Eugene Lee is a Boston-based flutist and freshman at Yale University who began his classical flute studies at Korea’s Yewon School (예원학교) before moving to Cambridge in 2022. A recent graduate of Cambridge Rindge and Latin School, Eugene served as principal flutist of the New England Conservatory Preparatory School’s Youth Philharmonic Orchestra under Juliano Aniceto and also played in the Honors Woodwind Quintet with coach Gregory Newton. During his time at NEC Prep, he studied privately with Nina Barwell and credits Steven Karidoyanes (YS), Adam Grossman (JRO), and Peter Jarvis (YSO) for his orchestral studies during his underclassmen years.
+              Eugene Lee is a Boston-born flutist and freshman at Yale University who began his classical flute studies at Korea’s Yewon School (예원학교) before moving to Cambridge in 2022. A recent graduate of Cambridge Rindge and Latin School, Eugene served as principal flutist of the New England Conservatory Preparatory School’s Youth Philharmonic Orchestra under Juliano Aniceto and also played in the Honors Woodwind Quintet with coach Gregory Newton. During his time at NEC Prep, he studied privately with Nina Barwell and credits Steven Karidoyanes (YS), Adam Grossman (JRO), and Peter Jarvis (YSO) for his orchestral studies during his underclassmen years.
             </p>
             <p className="leading-7 text-neutral-800 text-justify text-sm sm:text-base">
               Recent projects include his debut album Going Solo: 20th-Century Virtuosities for Solo Flute and appearances at the First Church of Cambridge as a soloist of the Boston City Showcase. His honors range from a Massachusetts Governor’s Citation in 2024 to being selected as a National YoungArts Winner in both 2024 and 2025, first prize in the 2023 UMass Amherst Young Artist Awards, and a finalist spot in NPR’s From the Top Learning & Media Lab Fellowship.
@@ -443,14 +443,15 @@ export default function App() {
               Professionally, Eugene has worked at the Center for Astrophysics | Harvard & Smithsonian, as part of its Minor Planet Center's “Planetary Defenders” team, where he spent two semesters and a summer helping refine a mathematical equation to predict asteroid locations and developing a Python program that verified the coordinates of more than 2,500 observatories around the world. Currently, he is independently contracted to Ringle, where he teaches English as a Second Language to students in various professional occupations. He is credited by his high school as the founder of the Rubik's Cube Club, where he led an initiative with his school's chapter of the National Honors Society to start Rubik’s Cube workshops for K–12 students at local youth centers. In the winter of 2025, the club successfully hosted a competition certified by the World Cube Association (WCA), in partnership with Cube New England, gathering over 150 cubers from New England.
             </p>
             <p className="leading-7 text-neutral-800 text-justify text-sm sm:text-base">
-              At Yale, Eugene plans to double major in Architecture and Music. He hopes to make a profound impact in whichever career path he decides to pursue.
+              At Yale, Eugene is a flutist for the Yale Symphony Orchestra and plans to double major in Architecture and Music. 
             </p>
           </div>
           <div className="space-y-3">
             <div className="rounded-xl bg-white shadow-soft border border-black/5 p-4">
               <h4 className="font-semibold">Highlights</h4>
               <ul className="text-sm mt-2 list-disc pl-5 text-neutral-700 space-y-1">
-                <li>Boston-based flutist, Yale '29</li>
+                <li>Boston/New Haven-based flutist, Yale '29</li>
+                <li>Flutist, Yale Symphony Orchestra</li>
                 <li>Former principal flutist, NEC Prep Youth Philharmonic Orchestra</li>
                 <li>Debut album: Going Solo: 20th-Century Virtuosities for Solo Flute</li>
                 <li>National YoungArts Winner (2024 & 2025), MA Governor’s Citation (2024)</li>
